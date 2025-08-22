@@ -1,46 +1,80 @@
-/* العنوان */
+:root {
+  --bg-color: #f4f4f4;
+  --card-bg: #fff;
+  --text-color: #333;
+  --card-text-color: #444;
+  --save-icon-color: rgba(0, 0, 0, 0.3);
+  --card-shadow: rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .gallery-title {
-  text-align: center;       /* توسيط النص */
-  margin: 20px 0;           /* مسافة فوق وتحت */
-  color: #333;              /* لون غامق */
-  font-size: 2rem;          /* حجم الخط */
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-/* شبكة الصور */
 .gallery-grid {
-  display: grid;                                 /* استخدام CSS Grid */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  /* أعمدة تلقائية، كل عمود عرضه 200px على الأقل */
-  gap: 20px;                                     /* فراغ بين الكروت */
-  padding: 20px;                                 /* مسافة حول الشبكة */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
 
-/* الكارد (container لكل صورة) */
 .gallery-card {
-  border: 1px solid #ccc;                       
-  border-radius: 10px;                           
-  overflow: hidden;                            
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);     
-  text-align: center;                           
-  background-color: #fff;                        
-  transition: transform 0.2s ease;               
+  position: relative;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 12px;
 }
 
 .gallery-card:hover {
-  transform: scale(1.05);                      
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 20px var(--card-shadow);
 }
-
 
 .gallery-img {
-  width: 100%;                                  
-  height: 150px;                                 
-  object-fit: cover;                            
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 10px;
   display: block;
+  background-color: #fff;
 }
 
-
 .gallery-text {
-  margin: 10px;                                 
-  font-weight: bold;                             
-  color: #444;                                  
+  margin: 0.8rem 0 0 0;
+  font-weight: 500;
+  color: var(--card-text-color);
+}
+
+.save-icon {
+  position: absolute;
+  top: 12px;  
+  right: 12px;
+  font-size: 1.6rem; 
+  color: var(--save-icon-color);
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  background-color: rgba(255,255,255,0.7); 
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.save-icon:hover {
+  transform: scale(1.25);
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255,255,255,0.9);
 }
