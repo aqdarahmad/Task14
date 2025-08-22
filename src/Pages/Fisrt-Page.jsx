@@ -25,7 +25,7 @@ export default function Fisrt_Page() {
 
     return (
         <div>
-            <Navbar />
+           
             <h1 className="gallery-title">Gallery</h1>
 
             <div className="gallery-grid">
