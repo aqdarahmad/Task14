@@ -7,9 +7,10 @@ import FetchData from "../Handelrs/ToggleSave";
 export default function Fisrt_Page() {
     const [photos, setPhotos] = useState([]);
     const [savedPhotos, setSavedPhotos] = useState([]);
+    const baseurl = import.meta.env.VITE_BASE_URL;
 
     useEffect(() => {
-        fetch("http://localhost:4000/photos").then(res => res.json()).then(data => setPhotos(data))
+        fetch(`${baseurl}/photos`).then(res => res.json()).then(data => setPhotos(data))
     }, []);
 
 

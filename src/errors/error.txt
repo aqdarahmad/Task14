@@ -7,5 +7,9 @@ while i am trying to import toggle method keep "ToggleSave.js:5
     at Array.map (<anonymous>)
     at Fisrt_Page (Fisrt-Page.jsx:23:25)
 "
+2, when i click on icon --> Uncaught TypeError: Cannot read properties of undefined (reading 'includes')
+    at Fisrt-Page.jsx:40:42
+    at Array.map (<anonymous>)
+    at Fisrt_Page (Fisrt-Page.jsx:32:25)
 
 
