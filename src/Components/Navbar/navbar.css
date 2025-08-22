@@ -1,0 +1,27 @@
+.navbar-container{
+    background-color: antiquewhite;
+    color: black;
+}
+.navbar ul{
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 8px;
+    padding: 25px;
+
+    
+}
+.navbar a {
+  text-decoration: none;
+  color: rgb(18, 17, 17);
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding: 5px 10px;
+}
+.navbar a:hover {
+  color: #00c3ff; 
+  border-bottom: 2px solid #00c3ff;
+}
