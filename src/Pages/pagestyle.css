@@ -1,0 +1,46 @@
+/* العنوان */
+.gallery-title {
+  text-align: center;       /* توسيط النص */
+  margin: 20px 0;           /* مسافة فوق وتحت */
+  color: #333;              /* لون غامق */
+  font-size: 2rem;          /* حجم الخط */
+}
+
+/* شبكة الصور */
+.gallery-grid {
+  display: grid;                                 /* استخدام CSS Grid */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* أعمدة تلقائية، كل عمود عرضه 200px على الأقل */
+  gap: 20px;                                     /* فراغ بين الكروت */
+  padding: 20px;                                 /* مسافة حول الشبكة */
+}
+
+/* الكارد (container لكل صورة) */
+.gallery-card {
+  border: 1px solid #ccc;                       
+  border-radius: 10px;                           
+  overflow: hidden;                            
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);     
+  text-align: center;                           
+  background-color: #fff;                        
+  transition: transform 0.2s ease;               
+}
+
+.gallery-card:hover {
+  transform: scale(1.05);                      
+}
+
+
+.gallery-img {
+  width: 100%;                                  
+  height: 150px;                                 
+  object-fit: cover;                            
+  display: block;
+}
+
+
+.gallery-text {
+  margin: 10px;                                 
+  font-weight: bold;                             
+  color: #444;                                  
+}
