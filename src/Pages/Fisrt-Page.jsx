@@ -1,8 +1,6 @@
-import Navbar from "../Components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import './pagestyle.css'
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
-import FetchData from "../Handelrs/ToggleSave";
 
 export default function Fisrt_Page() {
     const [photos, setPhotos] = useState([]);
@@ -25,7 +23,7 @@ export default function Fisrt_Page() {
 
     return (
         <div>
-           
+
             <h1 className="gallery-title">Gallery</h1>
 
             <div className="gallery-grid">
