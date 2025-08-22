@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from "react";
+import './themstyle.css'
 const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 export const ThemeProvider = ({ children }) => {

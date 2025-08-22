@@ -1,10 +1,11 @@
 import AppRouting from "./Routing/AppRouting";
-
-
+import { ThemeProvider } from "./ThemeContext/ThemeProvider";
 export default function App() {
   return (
     <div>
-      <AppRouting/>
+      <ThemeProvider>
+        <AppRouting />
+      </ThemeProvider>
     </div>
   )
 }
