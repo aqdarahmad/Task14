@@ -22,4 +22,13 @@
 5- Login.jsx:28  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'token')
     at handlelogin (Login.jsx:28:48)
     
+    6-Navbar.jsx:10 
+ Uncaught TypeError: Cannot destructure property 'theme' of 'useTheme(...)' as it is undefined.
+    at Navbar (Navbar.jsx:10:11)
+
+
+7- Layout.jsx:6  An error occurred in the <Navbar> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
 

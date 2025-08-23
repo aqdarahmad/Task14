@@ -17,7 +17,6 @@
 
 
 body, .app-container, .gallery-page {
-  background-color: var(--bg);
   color: var(--text-color);
 }
 
@@ -28,7 +27,6 @@ body, .app-container, .gallery-page {
 }
 
 
-.gallery-card {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-}
+
+
+

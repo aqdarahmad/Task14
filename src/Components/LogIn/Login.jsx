@@ -15,8 +15,6 @@ export default function Login() {
     const handleChange = (e) => {
         setuserdata(prev => ({ ...prev, [e.target.name]: e.target.value }))
 
-
-
     }
 
     const handlelogin = async (e) => {
