@@ -1,25 +1,19 @@
 import AppRouting from "./Routing/AppRouting";
-import { ThemeProvider  } from "./ThemeContext/ThemeProvider";
+import { ThemeProvider } from "./ThemeContext/ThemeProvider";
 import { createContext } from "react";
-import { useState , useEffect } from "react";
-
-
+import { useState } from "react";
 
 export const UserContext = createContext(null);
 
 export default function App() {
   const [userinfo, setuserinfo] = useState(null);
- 
-  
   return (
     <div>
-       <ThemeProvider>
-      <UserContext.Provider value={{ userinfo, setuserinfo }}>
-       
+      <ThemeProvider>
+        <UserContext.Provider value={{ userinfo, setuserinfo }}>
           <AppRouting />
-       
-      </UserContext.Provider>
-       </ThemeProvider>
+        </UserContext.Provider>
+      </ThemeProvider>
     </div>
   )
 }
