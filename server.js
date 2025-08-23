@@ -7,10 +7,10 @@ const PORT = 5000;
 
 const users = [
   {
-    username: "aqdar",
-    password: "12345",
+    username: "aqdar@hotmail.com",
+    password: "202111595",
     fullname: "Aqdar Ahmed",
-    email: "aqdar@example.com"
+    email: "aqdar@hotmail.com"
   }
 ];
 
