@@ -18,15 +18,26 @@ export default function Login() {
 
 
     }
-
+    /* 
+        const handlelogin = async (e) => {
+            e.preventDefault();
+            const res = await api.post("/login", {
+                username: userdata.username,
+                password: userdata.password
+            });
+            localStorage.setItem("token", res.data.token);
+            setuserinfo(res.data.userinfo);
+    
+        }; */
     const handlelogin = async (e) => {
         e.preventDefault();
+
         const res = await api.post("/login", {
             username: userdata.username,
             password: userdata.password
         });
-        localStorage.setItem("token", res.data.token);
-        setuserinfo(res.data.userinfo);
+        localStorage.setItem("token", res.token);
+        setuserinfo(res.userinfo);
 
     };
 

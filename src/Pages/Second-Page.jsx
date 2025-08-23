@@ -19,13 +19,11 @@ export default function Second_Page() {
         setSavedIds(saved);
     }, []);
 
-
     const savedPhotos = allPhotos.filter(photo => savedIds.includes(photo.id));
 
     return (
         <div>
             <h4 className="gallery-title">Saved Photos</h4>
-
             <div className="gallery-grid">
                 {savedPhotos.length > 0 ? (
                     savedPhotos.map(photo => (

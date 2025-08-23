@@ -1,31 +1,20 @@
-export default function Apiservice(baseurl , config ) {
+import axios from "axios";
 
-    // built on top of AJAX (XMLHttpRequest)
-    this.baseurl = baseurl;
-    this.config = config;
+export default function Apiservice(baseurl, config = {}) {
+  const instance = axios.create({
+    baseURL: baseurl,
+    headers: {
+      "Content-Type": "application/json",
+      ...(config.headers || {})
+    },
+    ...config
+  });
 
-    this.get = function(path , params={}) {
-        let query = "";
-        for(const key in params){
-           query += key + "=" + params[key] + "&";
-        }
-      
+  this.get = (path, params = {}) => instance.get(path, { params }).then(res => res.data);
 
-        return fetch(`${this.baseurl}${path}?${query}`, {
-            ...this.config,
-            method: "GET"
-        }).then(res => res.json());
-    };
+  this.post = (path, data) => instance.post(path, data).then(res => res.data);
 
-    this.post = function(path , data ){
-        return fetch(`${this.baseurl}${path}`,{
-            ...this.config,
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json",
-                ...(this.config?.headers || {})
-            },
-            body:JSON.stringify(data)
-        }).then(res => res.json());
-    };
+  this.put = (path, data) => instance.put(path, data).then(res => res.data);
+
+  this.delete = (path) => instance.delete(path).then(res => res.data);
 }

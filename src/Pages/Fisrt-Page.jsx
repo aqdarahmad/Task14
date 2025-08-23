@@ -10,9 +10,10 @@ export default function Fisrt_Page() {
     useEffect(() => {
         fetch(`${baseurl}/photos`).then(res => res.json()).then(data => setPhotos(data))
     }, []);
+
     useEffect(() => {
         localStorage.setItem("savedPhotos", JSON.stringify(savedPhotos));
-    
+
     }, [savedPhotos]);
 
 
@@ -26,25 +27,16 @@ export default function Fisrt_Page() {
         });
     };
 
-
     return (
         <div>
-
             <h1 className="gallery-title">Gallery</h1>
-
             <div className="gallery-grid">
                 {photos.map((photo) => (
                     <div className="gallery-card" key={photo.id}>
                         <img className="gallery-img" src={photo.src} alt={photo.title} />
-
-                        <div
-                            className="save-icon"
-                            onClick={() => toggleSave(photo.id)}
-                        >
+                        <div className="save-icon" onClick={() => toggleSave(photo.id)} >
                             {savedPhotos.includes(photo.id) ? <FaBookmark /> : <FaRegBookmark />}
                         </div>
-
-
                         <p className="gallery-text">{photo.title}</p>
                     </div>
                 ))}

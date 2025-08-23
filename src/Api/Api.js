@@ -1,10 +1,11 @@
-import axios from "axios";
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL
+import Apiservice from "./Apiservice";
+
+const token = localStorage.getItem("token");
+
+const api = new Apiservice(import.meta.env.VITE_API_URL, {
+  headers: {
+    "Authorization": `Bearer ${token}`
+  }
 });
 
 export default api;
-
-
-
-
