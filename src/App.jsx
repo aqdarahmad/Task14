@@ -1,10 +1,9 @@
-import React from 'react'
-import Login from './Components/Login'
+import Routing from './Routing/Routing'
 
 export default function App() {
   return (
     <>
-    <Login/>
+    <Routing/>
     </>
   )
 }

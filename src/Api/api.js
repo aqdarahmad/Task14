@@ -23,3 +23,17 @@ this.put = function(path , data){
 }
 
 }
+
+export const loginRequest = async (username , password) =>{
+    const response =  await axios.post("http://localhost:5000/api/login", {
+        username ,
+        password
+        });
+
+        return response.data.token;
+};
+
+
+
+
+
