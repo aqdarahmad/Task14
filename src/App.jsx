@@ -1,19 +1,10 @@
-import AppRouting from "./Routing/AppRouting";
-import { ThemeProvider } from "./ThemeContext/ThemeProvider";
-import { createContext } from "react";
-import { useState } from "react";
-
-export const UserContext = createContext(null);
+import React from 'react'
+import Login from './Components/Login'
 
 export default function App() {
-  const [userinfo, setuserinfo] = useState(null);
   return (
-    <div>
-      <ThemeProvider>
-        <UserContext.Provider value={{ userinfo, setuserinfo }}>
-          <AppRouting />
-        </UserContext.Provider>
-      </ThemeProvider>
-    </div>
+    <>
+    <Login/>
+    </>
   )
 }
