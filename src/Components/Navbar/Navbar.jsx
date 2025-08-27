@@ -1,10 +1,11 @@
 import { useContext } from "react"
-import { userContext } from "../../Contexts/userContext"
+import { UserContext } from "../../Contexts/UserContext"
+import { Link } from "react-router-dom";
 
 
 export default function Navbar() {
 
-    const [logout , token] = useContext(userContext);
+    const {logout , token} = useContext(UserContext);
 
       if (!token) return null;
 

@@ -1,39 +1,35 @@
 import axios from "axios";
-export default function api(baseurl , config={}) {
-    const instance = axios.create({
-        baseURL:baseurl ,
-        headers :{
-            "Content-Type" : "application/json",
-            ...AxiosHeaders(config.headers || {})
-        },
-        ...config
+
+
+export const createApi = (baseURL, config = {}) => {
+  const instance = axios.create({
+    baseURL,
+    headers: {
+      "Content-Type": "application/json",
+      ...config.headers,
+    },
+    ...config,
+  });
+
+  return {
+    get: (path, params = {}) => instance.get(path, { params }).then(res => res.data),
+    post: (path, data) => instance.post(path, data).then(res => res.data),
+    put: (path, data) => instance.put(path, data).then(res => res.data),
+  };
+};
+
+
+
+export const loginRequest = async (username, password) => {
+  try {
+    const response = await axios.post("http://localhost:5000/api/login", {
+      username,
+      password,
     });
-
-
-this.get = function (path , params = {}){
-    return instance.get(path , {params}).then(res=>res.data);
+  
+    return response.data.token;
+  } catch (error) {
+    console.error("Login failed:", error.response?.data || error.message);
+    throw new Error("Login failed");
+  }
 };
-
-this.post = function(path, data){
-    return instance.post(path,data).then(res=>res.data);
-};
-
-this.put = function(path , data){
-    return instance.put(path ,data ).then(res => res.data);
-}
-
-}
-
-export const loginRequest = async (username , password) =>{
-    const response =  await axios.post("http://localhost:5000/api/login", {
-        username ,
-        password
-        });
-
-        return response.data.token;
-};
-
-
-
-
-

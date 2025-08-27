@@ -1,23 +1,39 @@
 
 import { Route, Routes } from 'react-router-dom'
 import Login from '../Components/Login'
-import { useState } from 'react'
-import { userContext } from '../Contexts/userContext';
+
+import { UserContext } from '../Contexts/UserContext';
+import { useContext } from 'react';
+import Home from '../Pages/Home';
+import About from '../Pages/About';
+
 
 export default function Routing() {
 
 
-  const [userInfo , setuserInfo] = useState();
+
+
+  const {token} = useContext(UserContext);
 
 
   return (
    <>
-   <userContext.Provider value={{userInfo , setuserInfo}}>
-   <Routes>
-    <Route index element={<Login/>}/>
-   </Routes>
-   </userContext.Provider>
+
+     <Routes>
+        {!token ? (
+          <Route path="*" element={<Login />} />
+        ) : (
+          <>
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<Home />} />
+          </>
+        )}
+      </Routes>
+  
+    </>
+ 
    
-   </>
+ 
   )
 }

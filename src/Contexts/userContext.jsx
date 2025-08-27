@@ -1,33 +1,28 @@
-import { createContext , useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-export const userContext = createContext();
+export const UserContext = createContext();
 
-export const UserProvider = ({Children}) =>{
- const [token , setToken ] = useState(null);
+export const UserProvider = ({ children }) => {
+  const [token, setToken] = useState(null);
 
- useEffect(()=>{
+  useEffect(() => {
     const savedToken = localStorage.getItem("token");
-    if(savedToken)
+    if (savedToken) setToken(savedToken);
+  }, []);
 
-        setToken(savedToken);
-
- },[])
-
- const login = (newToken) =>{
-    localStorage.setItem("token" , newToken);
+  const login = (newToken) => {
+    localStorage.setItem("token", newToken);
     setToken(newToken);
- };
+  };
 
- const logout = ()=>{
+  const logout = () => {
     localStorage.removeItem("token");
     setToken(null);
- };
-    return (
-        <userContext.Provider value={{ token , login ,logout}}>
-        {Children}
-        </userContext.Provider>
-    );
-}
+  };
 
-
-
+  return (
+    <UserContext.Provider value={{ token, login, logout }}>
+      {children}
+    </UserContext.Provider>
+  );
+};

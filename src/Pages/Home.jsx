@@ -1,13 +1,13 @@
 import Navbar from "../Components/Navbar/Navbar";
 
 
-export default function FisrtPage() {
+export default function Home() {
   return (
     <>
 
      <Navbar/>
 
-     
+
     </>
   )
 }
