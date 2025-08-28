@@ -1,12 +1,13 @@
-import { UserProvider } from './Contexts/UserContext'
-import Routing from './Routing/Routing'
+import { ThemeProvider } from './Contexts/ThemeContext';
+import { UserProvider } from './Contexts/UserContext';
+import Routing from './Routing/Routing';
 
 export default function App() {
   return (
-    <>
-    <UserProvider>
-    <Routing/>
-    </UserProvider>
-    </>
-  )
+    <ThemeProvider>
+      <UserProvider>
+        <Routing />
+      </UserProvider>
+    </ThemeProvider>
+  );
 }
