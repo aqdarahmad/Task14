@@ -1,10 +1,10 @@
 import { Typography, Button, TextField, Box } from '@mui/material';
 import { useContext, useState } from 'react';
-import { loginRequest } from '../Api/api';
+import { loginRequest } from '../../Api/api';
 
 import { useNavigate } from 'react-router-dom';
 
-import { UserContext } from '../Contexts/UserContext';
+import { UserContext } from '../../Contexts/UserContext';
 
 export default function Login() {
   const [error, setError] = useState("");

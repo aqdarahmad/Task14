@@ -1,0 +1,27 @@
+.navbar {
+    padding: 10px 20px;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.nav-link {
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.nav-button{
+  
+    border: none;
+    background-color: antiquewhite;
+    color: black;
+    cursor: pointer;
+}

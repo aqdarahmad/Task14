@@ -1,0 +1,80 @@
+{
+  "products": [
+    {
+      "title": "Laptop Pro",
+      "description": "High performance laptop for work and gaming.",
+      "price": "$1200",
+      "id": "2b57"
+    },
+    {
+      "title": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse with long battery life.",
+      "price": "$25",
+      "id": "4927"
+    },
+    {
+      "title": "Mechanical Keyboard",
+      "description": "RGB backlit mechanical keyboard with tactile switches.",
+      "price": "$80",
+      "id": "ee5b"
+    },
+    {
+      "title": "HD Monitor",
+      "description": "24-inch full HD monitor with vibrant colors.",
+      "price": "$150",
+      "id": "a2d3"
+    },
+    {
+      "title": "USB-C Hub",
+      "description": "Expand your laptop ports with a compact hub.",
+      "price": "$40",
+      "id": "1ded"
+    },
+    {
+      "title": "External SSD",
+      "description": "Fast and portable SSD for data storage.",
+      "price": "$100",
+      "id": "c6b2"
+    },
+    {
+      "title": "Noise-Cancelling Headphones",
+      "description": "Experience music without distractions.",
+      "price": "$200",
+      "id": "85e4"
+    },
+    {
+      "title": "Smartphone Stand",
+      "description": "Adjustable stand for comfortable phone use.",
+      "price": "$15",
+      "id": "d1b6"
+    },
+    {
+      "title": "Bluetooth Speaker",
+      "description": "Portable speaker with deep bass.",
+      "price": "$60",
+      "id": "fea7"
+    },
+    {
+      "title": "Fitness Tracker",
+      "description": "Track your activity and sleep with ease.",
+      "price": "$50",
+      "id": "5d3c"
+    },
+    {
+      "title": "Webcam HD",
+      "description": "1080p webcam for clear video calls.",
+      "price": "$70",
+      "id": "969e"
+    },
+    {
+      "title": "Portable Charger",
+      "description": "High-capacity power bank for charging on the go.",
+      "price": "$35",
+      "id": "1664"
+    },
+    {
+      "id": "5f5c",
+      "name": "Add your name in the body"
+    }
+  ]
+}

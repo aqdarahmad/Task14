@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { UserContext } from "../../Contexts/UserContext"
 import { Link } from "react-router-dom";
+import './navbar.css'
 
 
 export default function Navbar() {
@@ -12,12 +13,13 @@ export default function Navbar() {
 
   return (
    
-    <nav  style={{ padding: "10px", background: "#f5f5f5" }} >
+    <nav  className="navbar">
+      <div className="nav-links">
 
-        <Link to="/home" style={{ marginRight: "15px" }}>Home</Link>
-        <Link to = "/about" style={{ marginRight: "15px" }}>About</Link>
-        <button onClick={logout}> logout</button>
-
+        <Link to="/home" className="nav-link">Home</Link>
+        <Link to = "/about" className="nav-link">About</Link>
+        <button onClick={logout} className="nav-button"> logout</button>
+     </div>
     </nav>
 
 
