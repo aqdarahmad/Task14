@@ -1,4 +1,5 @@
 import Navbar from "../Components/Navbar/Navbar";
+import Card from "../Components/Card/Card";
 
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
 
      <Navbar/>
+     <Card/>
 
 
     </>

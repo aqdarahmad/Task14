@@ -17,7 +17,7 @@ export default function Navbar() {
       <div className="nav-links">
 
         <Link to="/home" className="nav-link">Home</Link>
-        <Link to = "/about" className="nav-link">About</Link>
+
         <button onClick={logout} className="nav-button"> logout</button>
      </div>
     </nav>

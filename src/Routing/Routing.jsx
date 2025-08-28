@@ -5,7 +5,7 @@ import Login from '../Components/Login/Login'
 import { UserContext } from '../Contexts/UserContext';
 import { useContext } from 'react';
 import Home from '../Pages/Home';
-import About from '../Pages/About';
+
 
 
 export default function Routing() {
@@ -25,7 +25,7 @@ export default function Routing() {
         ) : (
           <>
             <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
+         
             <Route path="*" element={<Home />} />
           </>
         )}
